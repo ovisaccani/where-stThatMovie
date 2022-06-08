@@ -1,0 +1,6 @@
+module Pods_WhereIsThatMovie_WhereIsThatMovieTests {
+  umbrella header "Pods-WhereIsThatMovie-WhereIsThatMovieTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
