@@ -1,5 +1,5 @@
 import React from "react";
-import { SafeAreaView, StyleSheet, Text, View } from "react-native";
+import { StyleSheet } from "react-native";
 import { StackNavigator } from "./src/navigation/StackNavigator";
 import "react-native-gesture-handler";
 import { NavigationContainer } from "@react-navigation/native";

@@ -63,7 +63,7 @@ export const Login = ({ navigation }: Props) => {
 						justifyContent: "center",
 						marginTop: 16,
 					}}
-          onPress={()=>navigation.navigate("CreateAccount")}
+					onPress={() => navigation.navigate("CreateAccount")}
 				>
 					<Text style={styles.fontOlvidaste}>
 						¿No tenes cuenta? Registrate acá

@@ -1,5 +1,11 @@
 import React, { useState } from "react";
-import { StyleSheet, Text, TextInput, View } from "react-native";
+import {
+	StyleSheet,
+	Text,
+	TextInput,
+	TouchableOpacity,
+	View,
+} from "react-native";
 import Icon from "react-native-vector-icons/MaterialCommunityIcons";
 
 interface Props {
@@ -30,12 +36,17 @@ export const InputLogin = ({
 					secureTextEntry={showPassword}
 				/>
 				{isPassword ? (
-					<Icon
-						name={showPassword ? "eye-outline" : "eye-off-outline"}
-						size={25}
-						style={styles.iconStyle}
+					<TouchableOpacity
 						onPress={() => setShowPassword(!showPassword)}
-					/>
+					>
+						<Icon
+							name={
+								showPassword ? "eye-outline" : "eye-off-outline"
+							}
+							size={25}
+							style={styles.iconStyle}
+						/>
+					</TouchableOpacity>
 				) : null}
 			</View>
 		</View>
