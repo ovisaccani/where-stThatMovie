@@ -45,7 +45,7 @@ export const Login = ({ navigation }: Props) => {
           source={require('../images/logo.png')}
         /> */}
 				<InputLogin
-					title="Usuario"
+					title="Email"
 					value={usuario}
 					setValue={setusuario}
 				/>

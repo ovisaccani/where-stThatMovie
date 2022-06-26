@@ -9,18 +9,25 @@ export const CreateAccount = () => {
   const [usuario, setusuario] = useState("");
 	const [contrasena, setContrasena] = useState("");
 	const [error, setError] = useState("");
+  const [successMessage, setSuccessMessage] = useState("");
+
 
   const register = () => {
 		if (usuario === "" || contrasena === "") {
 			setError("Error. Debe completar ámbos campos");
+      setSuccessMessage("")
 		} else {
 			
 			auth
 				.createUserWithEmailAndPassword (usuario, contrasena)
 				.then((userCredentials: any) =>{
-					//hacer algo
+          setError("");
+					setSuccessMessage("Usuario registrado exitosamente!")
 				})
-				.catch((error: any) => setError(error.message))
+				.catch((error: any) => {
+          setError(error.message);
+          setSuccessMessage("");
+        })
 		
 		}
 	};
@@ -40,7 +47,7 @@ export const CreateAccount = () => {
           source={require('../images/logo.png')}
         /> */}
 				<InputLogin
-					title="Usuario"
+					title="Email"
 					value={usuario}
 					setValue={setusuario}
 				/>
@@ -53,6 +60,11 @@ export const CreateAccount = () => {
 				{error !== "" ? (
 					<View style={{ width: "100%", marginTop: 4 }}>
 						<Text style={styles.fontError}>{error}</Text>
+					</View>
+				) : null}
+        {successMessage !== "" ? (
+					<View style={{ width: "100%", marginTop: 4 }}>
+						<Text style={styles.fontSuccess}>{successMessage}</Text>
 					</View>
 				) : null}
 				<TouchableOpacity
@@ -93,6 +105,9 @@ const styles = StyleSheet.create({
 	},
 	fontError: {
 		color: "red",
+	},
+  fontSuccess: {
+		color: "green",
 	},
 	botonAceptar: {
 		marginTop: 45,
