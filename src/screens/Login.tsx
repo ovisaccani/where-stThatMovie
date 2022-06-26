@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Image, StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import { StackScreenProps } from "@react-navigation/stack";
 import { InputLogin } from "../components/InputLogin";
+import { auth } from "../../firebase";
 
 interface Props extends StackScreenProps<any, any> {}
 
@@ -14,7 +15,19 @@ export const Login = ({ navigation }: Props) => {
 		if (usuario === "" || contrasena === "") {
 			setError("Error. Debe completar ámbos campos");
 		} else {
-			navigation.navigate("Home");
+			
+			auth
+				.signInWithEmailAndPassword(usuario, contrasena)
+				.then((userCredentials: any) =>{
+					const user = userCredentials
+					if (user){
+						navigation.navigate("Home");
+					}else{
+						setError("Error. usario o contraseña invalidos.");
+					}
+				})
+				.catch((error: any) => setError(error.message))
+		
 		}
 	};
 
