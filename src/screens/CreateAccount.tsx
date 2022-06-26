@@ -1,13 +1,111 @@
-import { StyleSheet, Text, View } from 'react-native'
-import React from 'react'
+import React, { useState } from "react";
+import { Image, StyleSheet, Text, TouchableOpacity, View } from "react-native";
+import { StackScreenProps } from "@react-navigation/stack";
+import { InputLogin } from "../components/InputLogin";
+import { auth } from "../../firebase";
 
 export const CreateAccount = () => {
+
+  const [usuario, setusuario] = useState("");
+	const [contrasena, setContrasena] = useState("");
+	const [error, setError] = useState("");
+
+  const register = () => {
+		if (usuario === "" || contrasena === "") {
+			setError("Error. Debe completar ámbos campos");
+		} else {
+			
+			auth
+				.createUserWithEmailAndPassword (usuario, contrasena)
+				.then((userCredentials: any) =>{
+					//hacer algo
+				})
+				.catch((error: any) => setError(error.message))
+		
+		}
+	};
+
   return (
-    <View>
-      <Text>CreateAccount</Text>
-    </View>
+
+    	<View
+			style={{
+				flex: 1,
+				alignItems: "center",
+			}}
+		>
+			<View style={styles.container}>
+				{/*         <Image
+          style={{marginTop: 40, width: '100%'}}
+          resizeMode="contain"
+          source={require('../images/logo.png')}
+        /> */}
+				<InputLogin
+					title="Usuario"
+					value={usuario}
+					setValue={setusuario}
+				/>
+				<InputLogin
+					title="Contraseña"
+					value={contrasena}
+					setValue={setContrasena}
+					isPassword
+				/>
+				{error !== "" ? (
+					<View style={{ width: "100%", marginTop: 4 }}>
+						<Text style={styles.fontError}>{error}</Text>
+					</View>
+				) : null}
+				<TouchableOpacity
+					style={styles.botonAceptar}
+					onPress={register}
+				>
+					<Text style={styles.botonTexto}>REGISTRAR</Text>
+				</TouchableOpacity>			
+			</View>
+		</View>
   )
 }
 
 
-const styles = StyleSheet.create({})
+
+const styles = StyleSheet.create({
+	container: {
+		flex: 1,
+		display: "flex",
+		flexDirection: "column",
+		alignItems: "center",
+		width: "70%",
+		backgroundColor: "#F3F1F1",
+		marginTop: 24,
+	},
+	containerInput: {
+		width: "100%",
+		marginVertical: 12,
+	},
+	input: {
+		height: 38,
+		borderWidth: 1,
+		borderRadius: 10,
+		marginTop: 4,
+	},
+	fontOlvidaste: {
+		color: "#00386E",
+	},
+	fontError: {
+		color: "red",
+	},
+	botonAceptar: {
+		marginTop: 45,
+		width: "100%",
+		backgroundColor: "#00386E",
+		alignItems: "center",
+		height: 35,
+		justifyContent: "center",
+		borderRadius: 4,
+		borderWidth: 1,
+	},
+	botonTexto: {
+		color: "white",
+		fontWeight: "bold",
+	},
+});
