@@ -27,10 +27,10 @@ export const useMovies = () => {
 
         setIsLoading(true);       
        
-        const nowPlayingPromise = peliculaBd.get<MovieDBMoviesResponse>('/movie/now_playing');
-        const popularPromise    = peliculaBd.get<MovieDBMoviesResponse>('/movie/popular');
-        const topRatedPromise   = peliculaBd.get<MovieDBMoviesResponse>('/movie/top_rated');
-        const upcomingPromise   = peliculaBd.get<MovieDBMoviesResponse>('/movie/upcoming');
+        const nowPlayingPromise     = peliculaBd.get<MovieDBMoviesResponse>('/movie/now_playing');
+        const popularPromise        = peliculaBd.get<MovieDBMoviesResponse>('/movie/popular');
+        const topRatedPromise       = peliculaBd.get<MovieDBMoviesResponse>('/movie/top_rated');
+        const upcomingPromise       = peliculaBd.get<MovieDBMoviesResponse>('/movie/upcoming');
         const searchedMoviesPromise = peliculaBd.get<MovieDBMoviesResponse>('/search/movie',{ params: { query: searchParams } });
         
         const resps = await Promise.all([ 

@@ -47,7 +47,7 @@ export const Home = ({ navigation }: Props) => {
 			<TouchableOpacity					
 				onPress={getMovies}
 			>
-				<Text >BusCAR</Text>
+				<Text >BuScAr</Text>
 			</TouchableOpacity>			
 			
 			<ScrollView>
