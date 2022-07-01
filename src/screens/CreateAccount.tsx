@@ -21,7 +21,7 @@ export const CreateAccount = () => {
 			auth
 				.createUserWithEmailAndPassword (usuario, contrasena)
 				.then((userCredentials: any) =>{
-          setError("");
+          			setError("");
 					setSuccessMessage("Usuario registrado exitosamente!")
 				})
 				.catch((error: any) => {

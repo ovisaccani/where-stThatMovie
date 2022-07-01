@@ -7,31 +7,38 @@ interface MoviesState {
     popular: Movie[];
     topRated: Movie[];
     upcoming: Movie[];
+    searched: Movie[];
 }
 
 export const useMovies = () => {
 
     const [ isLoading, setIsLoading ] = useState(true);
+    const [ searchParams, setSearchParams ] = useState('Doctor');
     const [ moviesState, setMoviesState ] = useState<MoviesState>({
         nowPlaying: [],
         popular: [],
         topRated: [],
         upcoming: [],
+        searched: []
     })
 
 
     const getMovies = async () => {
-        
-        const nowPlayingPromise = peliculaBd.get<MovieDBMoviesResponse>('/now_playing');
-        const popularPromise    = peliculaBd.get<MovieDBMoviesResponse>('/popular');
-        const topRatedPromise   = peliculaBd.get<MovieDBMoviesResponse>('/top_rated');
-        const upcomingPromise   = peliculaBd.get<MovieDBMoviesResponse>('/upcoming');
+
+        setIsLoading(true);       
+       
+        const nowPlayingPromise = peliculaBd.get<MovieDBMoviesResponse>('/movie/now_playing');
+        const popularPromise    = peliculaBd.get<MovieDBMoviesResponse>('/movie/popular');
+        const topRatedPromise   = peliculaBd.get<MovieDBMoviesResponse>('/movie/top_rated');
+        const upcomingPromise   = peliculaBd.get<MovieDBMoviesResponse>('/movie/upcoming');
+        const searchedMoviesPromise = peliculaBd.get<MovieDBMoviesResponse>('/search/movie',{ params: { query: searchParams } });
         
         const resps = await Promise.all([ 
             nowPlayingPromise, 
             popularPromise, 
             topRatedPromise, 
-            upcomingPromise 
+            upcomingPromise,
+            searchedMoviesPromise
         ]);
 
         setMoviesState({
@@ -39,9 +46,10 @@ export const useMovies = () => {
             popular: resps[1].data.results,
             topRated: resps[2].data.results,
             upcoming: resps[3].data.results,
+            searched: resps[4].data.results,
         })
 
-        setIsLoading( false );
+        setIsLoading(false);
     }
 
    
@@ -55,6 +63,9 @@ export const useMovies = () => {
 
     return {
         ...moviesState,
+        searchParams,
+        setSearchParams,
+        getMovies,
         isLoading
     }
 
