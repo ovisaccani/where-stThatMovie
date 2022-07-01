@@ -4,37 +4,38 @@ import { StackScreenProps } from "@react-navigation/stack";
 import { InputLogin } from "../components/InputLogin";
 import { auth } from "../../firebase";
 
-export const CreateAccount = () => {
+interface Props extends StackScreenProps<any, any> {}
 
-  const [usuario, setusuario] = useState("");
+export const CreateAccount = ({ navigation }: Props) => {
+	const [usuario, setusuario] = useState("");
 	const [contrasena, setContrasena] = useState("");
 	const [error, setError] = useState("");
-  const [successMessage, setSuccessMessage] = useState("");
+	const [successMessage, setSuccessMessage] = useState("");
 
-
-  const register = () => {
+	const register = () => {
 		if (usuario === "" || contrasena === "") {
 			setError("Error. Debe completar ámbos campos");
-      setSuccessMessage("")
+			setSuccessMessage("");
 		} else {
-			
-			auth
-				.createUserWithEmailAndPassword (usuario, contrasena)
-				.then((userCredentials: any) =>{
-          			setError("");
-					setSuccessMessage("Usuario registrado exitosamente!")
+			auth.createUserWithEmailAndPassword(usuario, contrasena)
+				.then((userCredentials: any) => {
+					setError("");
+					setSuccessMessage(
+						"Usuario registrado exitosamente! En 3 segundos será redireccionado a la Home"
+					);
+					setTimeout(() => {
+						navigation.navigate("Home");
+					}, 3000);
 				})
 				.catch((error: any) => {
-          setError(error.message);
-          setSuccessMessage("");
-        })
-		
+					setError(error.message);
+					setSuccessMessage("");
+				});
 		}
 	};
 
-  return (
-
-    	<View
+	return (
+		<View
 			style={{
 				flex: 1,
 				alignItems: "center",
@@ -62,7 +63,7 @@ export const CreateAccount = () => {
 						<Text style={styles.fontError}>{error}</Text>
 					</View>
 				) : null}
-        {successMessage !== "" ? (
+				{successMessage !== "" ? (
 					<View style={{ width: "100%", marginTop: 4 }}>
 						<Text style={styles.fontSuccess}>{successMessage}</Text>
 					</View>
@@ -72,13 +73,11 @@ export const CreateAccount = () => {
 					onPress={register}
 				>
 					<Text style={styles.botonTexto}>REGISTRAR</Text>
-				</TouchableOpacity>			
+				</TouchableOpacity>
 			</View>
 		</View>
-  )
-}
-
-
+	);
+};
 
 const styles = StyleSheet.create({
 	container: {
@@ -106,7 +105,7 @@ const styles = StyleSheet.create({
 	fontError: {
 		color: "red",
 	},
-  fontSuccess: {
+	fontSuccess: {
 		color: "green",
 	},
 	botonAceptar: {

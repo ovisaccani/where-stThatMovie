@@ -4,12 +4,20 @@ import { Login } from "../screens/Login";
 import { Home } from "../screens/Home";
 import { CreateAccount } from "../screens/CreateAccount";
 import { MovieDetail } from "../screens/MovieDetail";
+import { MovieDBMoviesResponse, Movie } from "../interfaces/movieInterface";
 
-const Stack = createStackNavigator();
+const Stack = createStackNavigator<RootStackParams>();
+
+export type RootStackParams = {
+	Login: undefined;
+	Home: undefined;
+	CreateAccount: undefined;
+	MovieDetail: Movie;
+};
 
 export const StackNavigator = () => {
 	return (
-		<Stack.Navigator>
+		<Stack.Navigator screenOptions={{ headerShown: false }}>
 			<Stack.Screen name="Login" component={Login} />
 			<Stack.Screen name="Home" component={Home} />
 			<Stack.Screen name="CreateAccount" component={CreateAccount} />
