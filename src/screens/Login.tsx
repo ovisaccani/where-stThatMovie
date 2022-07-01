@@ -20,7 +20,7 @@ export const Login = ({ navigation }: Props) => {
 				.signInWithEmailAndPassword(usuario, contrasena)
 				.then((userCredentials: any) =>{
 					const user = userCredentials
-					if (user){
+					if (user){						
 						navigation.navigate("Home");
 					}else{
 						setError("Error. usario o contraseña invalidos.");
@@ -39,11 +39,6 @@ export const Login = ({ navigation }: Props) => {
 			}}
 		>
 			<View style={styles.container}>
-				{/*         <Image
-          style={{marginTop: 40, width: '100%'}}
-          resizeMode="contain"
-          source={require('../images/logo.png')}
-        /> */}
 				<InputLogin
 					title="Email"
 					value={usuario}
