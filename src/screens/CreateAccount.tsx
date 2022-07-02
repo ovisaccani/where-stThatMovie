@@ -42,11 +42,6 @@ export const CreateAccount = ({ navigation }: Props) => {
 			}}
 		>
 			<View style={styles.container}>
-				{/*         <Image
-          style={{marginTop: 40, width: '100%'}}
-          resizeMode="contain"
-          source={require('../images/logo.png')}
-        /> */}
 				<InputLogin
 					title="Email"
 					value={usuario}

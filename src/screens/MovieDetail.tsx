@@ -47,7 +47,6 @@ export const MovieDetail = ( { route, navigation }: Props ) => {
                     : <MovieDetailsComponent movieFull={ movieFull! } cast={ cast } />
             }
 
-            {/* Boton para cerrar */}
             <View style={ styles.backButton }>
                 <TouchableOpacity
                     onPress={() => navigation.pop() }

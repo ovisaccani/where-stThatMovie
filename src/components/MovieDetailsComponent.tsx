@@ -17,7 +17,7 @@ interface Props {
 export const MovieDetailsComponent = ({ movieFull, cast }: Props) => {
     return (
         <>
-            {/* Detalles */}
+
             <View style={{ marginHorizontal: 20 }}>
 
                 <View style={{ flexDirection: 'row' }}>
@@ -35,7 +35,7 @@ export const MovieDetailsComponent = ({ movieFull, cast }: Props) => {
 
                 </View>
 
-                {/* Historia */}
+
                 <Text style={{ fontSize: 23, marginTop: 10, fontWeight: 'bold' }}>
                     Historia
                 </Text>
@@ -44,7 +44,6 @@ export const MovieDetailsComponent = ({ movieFull, cast }: Props) => {
                     { movieFull.overview }
                 </Text>
 
-                {/* Historia */}
                 <Text style={{ fontSize: 23, marginTop: 10, fontWeight: 'bold' }}>
                     Presupuesto
                 </Text>
@@ -55,7 +54,7 @@ export const MovieDetailsComponent = ({ movieFull, cast }: Props) => {
 
             </View>
 
-            {/* Casting */}
+
             <View style={{ marginTop: 10, marginBottom: 100   }}>
                 <Text style={{ fontSize: 23, marginTop: 10, fontWeight: 'bold', marginHorizontal: 20}}>
                     Actores
