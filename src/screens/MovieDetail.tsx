@@ -1,6 +1,6 @@
 import { StackScreenProps } from '@react-navigation/stack';
-import React from 'react';
-import { Image, Text, View, StyleSheet, Dimensions, ActivityIndicator } from 'react-native';
+import React, { useCallback } from "react";
+import { Image, Text, View, StyleSheet, Dimensions, ActivityIndicator,Alert, Button, Linking, } from 'react-native';
 import { ScrollView, TouchableOpacity } from 'react-native-gesture-handler';
 import { RootStackParams } from '../navigation/StackNavigator';
 
@@ -8,11 +8,18 @@ import { useMovieDetails } from '../hooks/useMovieDetails';
 import { MovieDetailsComponent } from '../components/MovieDetailsComponent';
 import Icon from 'react-native-vector-icons/Ionicons';
 
+
+
+
 const screenHeight = Dimensions.get('screen').height;
 
 
 
 interface Props extends StackScreenProps<RootStackParams, 'MovieDetail'>{};
+
+const supportedURL = "https://www.google.com/";
+
+
 
 export const MovieDetail = ( { route, navigation }: Props ) => {
     
@@ -22,8 +29,20 @@ export const MovieDetail = ( { route, navigation }: Props ) => {
 
     const { isLoading, cast, movieFull } = useMovieDetails( movie.id );
 
+    const openUrl = async (url: string) => {
+        const isSupported = await Linking.canOpenURL(url);
+        if (isSupported) {
+            await Linking.openURL(url);
+        } else {
+            Alert.alert(`Don't know how to open this url: ${url}`);
+        }
+    }
+      
+
 
     return (
+
+        
 
         <ScrollView>
             <View style={ styles.imageContainer }>
@@ -38,6 +57,12 @@ export const MovieDetail = ( { route, navigation }: Props ) => {
             <View style={ styles.marginContainer }>
                 <Text style={ styles.subTitle }>{ movie.original_title }</Text>
                 <Text style={ styles.title }>{ movie.title }</Text>
+            </View>
+
+            <View style={styles.marginContainer}>
+                <Button title="call" onPress={() => {
+                    Linking.openURL(supportedURL)
+                }} color="red" />
             </View>
 
             
