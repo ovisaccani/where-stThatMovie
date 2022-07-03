@@ -94,23 +94,23 @@ MERGED from [com.facebook.flipper:flipper:0.125.0] C:\Users\Echigah\.gradle\cach
 	android:name
 		ADDED from D:\Documentos\GitHub\where-stThatMovie\android\app\src\main\AndroidManifest.xml:4:22-64
 queries
-ADDED from D:\Documentos\GitHub\where-stThatMovie\android\app\src\main\AndroidManifest.xml:6:5-23:13
+ADDED from D:\Documentos\GitHub\where-stThatMovie\android\app\src\main\AndroidManifest.xml:6:5-23:15
 intent#action:name:android.intent.action.VIEW+data:scheme:http
-ADDED from D:\Documentos\GitHub\where-stThatMovie\android\app\src\main\AndroidManifest.xml:7:5-10:14
+ADDED from D:\Documentos\GitHub\where-stThatMovie\android\app\src\main\AndroidManifest.xml:7:7-10:16
 action#android.intent.action.VIEW
-ADDED from D:\Documentos\GitHub\where-stThatMovie\android\app\src\main\AndroidManifest.xml:8:7-59
+ADDED from D:\Documentos\GitHub\where-stThatMovie\android\app\src\main\AndroidManifest.xml:8:9-61
 	android:name
-		ADDED from D:\Documentos\GitHub\where-stThatMovie\android\app\src\main\AndroidManifest.xml:8:15-56
+		ADDED from D:\Documentos\GitHub\where-stThatMovie\android\app\src\main\AndroidManifest.xml:8:17-58
 data
-ADDED from D:\Documentos\GitHub\where-stThatMovie\android\app\src\main\AndroidManifest.xml:9:7-36
+ADDED from D:\Documentos\GitHub\where-stThatMovie\android\app\src\main\AndroidManifest.xml:9:9-38
 	android:scheme
-		ADDED from D:\Documentos\GitHub\where-stThatMovie\android\app\src\main\AndroidManifest.xml:9:13-34
+		ADDED from D:\Documentos\GitHub\where-stThatMovie\android\app\src\main\AndroidManifest.xml:9:15-36
 intent#action:name:android.intent.action.VIEW+data:scheme:https
-ADDED from D:\Documentos\GitHub\where-stThatMovie\android\app\src\main\AndroidManifest.xml:11:5-14:14
+ADDED from D:\Documentos\GitHub\where-stThatMovie\android\app\src\main\AndroidManifest.xml:11:7-14:16
 intent#action:name:android.intent.action.VIEW+data:scheme:geo
-ADDED from D:\Documentos\GitHub\where-stThatMovie\android\app\src\main\AndroidManifest.xml:15:5-18:14
+ADDED from D:\Documentos\GitHub\where-stThatMovie\android\app\src\main\AndroidManifest.xml:15:7-18:16
 intent#action:name:android.intent.action.VIEW+data:scheme:google.navigation
-ADDED from D:\Documentos\GitHub\where-stThatMovie\android\app\src\main\AndroidManifest.xml:19:5-22:14
+ADDED from D:\Documentos\GitHub\where-stThatMovie\android\app\src\main\AndroidManifest.xml:19:7-22:16
 application
 ADDED from D:\Documentos\GitHub\where-stThatMovie\android\app\src\main\AndroidManifest.xml:25:5-44:19
 MERGED from D:\Documentos\GitHub\where-stThatMovie\android\app\src\main\AndroidManifest.xml:25:5-44:19

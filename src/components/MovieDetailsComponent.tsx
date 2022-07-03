@@ -2,21 +2,20 @@ import React from 'react'
 import { FlatList, Text, View } from 'react-native';
 import currencyFormatter from 'currency-formatter';
 import Icon from 'react-native-vector-icons/Ionicons';
-
-
 import { MovieFull } from '../interfaces/movieInterface';
 import { Cast } from '../interfaces/creditsInterface';
 import { CastItem } from './CastItem';
-import { StreamingButtonLink } from '../components/streamingButtonLink';
+import { StreamingButtonLink } from './StreamingButtonLink';
+import { StreamingInfo } from '../interfaces/movieRapidInterface';
+
 
 interface Props {
     movieFull: MovieFull;
-    cast: Cast[]
+    cast: Cast[],
+    streamingInfo: StreamingInfo
 }
 
-const supportedURL = "https://www.google.com/";
-
-export const MovieDetailsComponent = ({ movieFull, cast }: Props) => {
+export const MovieDetailsComponent = ({ movieFull, cast, streamingInfo }: Props) => {
     return (
         <>
 
@@ -37,11 +36,53 @@ export const MovieDetailsComponent = ({ movieFull, cast }: Props) => {
 
                 </View>
 
-                <StreamingButtonLink
-                    buttonName='soy un boton'
-                    url={supportedURL}
-                />
+              
 
+                {
+                    streamingInfo.disney?
+                        <StreamingButtonLink
+                            buttonName='Disney'
+                            url={streamingInfo.disney?.ar.link}
+                        />
+                    :
+                    <View/>
+                }
+                {
+                    streamingInfo.hbo?
+                        <StreamingButtonLink
+                            buttonName='HBO'
+                            url={streamingInfo.hbo?.ar.link}
+                        />
+                    :
+                    <View/>
+                }
+                {
+                    streamingInfo.hulu?
+                        <StreamingButtonLink
+                            buttonName='Hulu'
+                            url={streamingInfo.hulu?.ar.link}
+                        />
+                    :
+                    <View/>
+                }
+                {
+                    streamingInfo.netflix?
+                        <StreamingButtonLink
+                            buttonName='Netflix'
+                            url={streamingInfo.netflix?.ar.link}
+                        />
+                    :
+                    <View/>
+                }
+                {
+                    streamingInfo.prime?
+                        <StreamingButtonLink
+                            buttonName='Prime'
+                            url={streamingInfo.prime?.ar.link}
+                        />
+                    :
+                    <View/>
+                }
 
                 <Text style={{ fontSize: 23, marginTop: 10, fontWeight: 'bold' }}>
                     Historia

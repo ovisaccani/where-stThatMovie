@@ -15,7 +15,7 @@ export const MovieDetail = ( { route, navigation }: Props ) => {
     const movie = route.params;
     console.log(movie)
     const uri = `https://image.tmdb.org/t/p/w500${ movie.poster_path }`;
-    const { isLoading, cast, movieFull } = useMovieDetails( movie.id ); 
+    const { isLoading, cast, movieFull, streamingInfo } = useMovieDetails( movie.id ); 
 
     return (        
 
@@ -37,7 +37,7 @@ export const MovieDetail = ( { route, navigation }: Props ) => {
             {
                 isLoading 
                     ? <ActivityIndicator size={ 35 } color="grey" style={{ marginTop: 20 }} />
-                    : <MovieDetailsComponent movieFull={ movieFull! } cast={ cast } />
+                    : <MovieDetailsComponent movieFull={ movieFull! } cast={ cast } streamingInfo={ streamingInfo } />
             }
 
             <View style={ styles.backButton }>
