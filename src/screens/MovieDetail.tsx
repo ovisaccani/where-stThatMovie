@@ -1,5 +1,5 @@
 import { StackScreenProps } from '@react-navigation/stack';
-import React, { useCallback } from "react";
+import React from "react";
 import { Image, Text, View, StyleSheet, Dimensions, ActivityIndicator,Alert, Button, Linking, } from 'react-native';
 import { ScrollView, TouchableOpacity } from 'react-native-gesture-handler';
 import { RootStackParams } from '../navigation/StackNavigator';
@@ -61,7 +61,7 @@ export const MovieDetail = ( { route, navigation }: Props ) => {
 
             <View style={styles.marginContainer}>
                 <Button title="call" onPress={() => {
-                    Linking.openURL(supportedURL)
+                    openUrl(supportedURL)
                 }} color="red" />
             </View>
 
