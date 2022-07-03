@@ -39,46 +39,46 @@ export const MovieDetailsComponent = ({ movieFull, cast, streamingInfo }: Props)
               
 
                 {
-                    streamingInfo.disney?
+                    streamingInfo?.disney?
                         <StreamingButtonLink
                             buttonName='Disney'
-                            url={streamingInfo.disney?.ar.link}
+                            url={streamingInfo?.disney?.ar.link}
                         />
                     :
                     <View/>
                 }
                 {
-                    streamingInfo.hbo?
+                    streamingInfo?.hbo?
                         <StreamingButtonLink
                             buttonName='HBO'
-                            url={streamingInfo.hbo?.ar.link}
+                            url={streamingInfo?.hbo?.ar.link}
                         />
                     :
                     <View/>
                 }
                 {
-                    streamingInfo.hulu?
+                    streamingInfo?.hulu?
                         <StreamingButtonLink
                             buttonName='Hulu'
-                            url={streamingInfo.hulu?.ar.link}
+                            url={streamingInfo?.hulu?.ar.link}
                         />
                     :
                     <View/>
                 }
                 {
-                    streamingInfo.netflix?
+                    streamingInfo?.netflix?
                         <StreamingButtonLink
                             buttonName='Netflix'
-                            url={streamingInfo.netflix?.ar.link}
+                            url={streamingInfo?.netflix?.ar.link}
                         />
                     :
                     <View/>
                 }
                 {
-                    streamingInfo.prime?
+                    streamingInfo?.prime?
                         <StreamingButtonLink
                             buttonName='Prime'
-                            url={streamingInfo.prime?.ar.link}
+                            url={streamingInfo?.prime?.ar.link}
                         />
                     :
                     <View/>
