@@ -7,12 +7,14 @@ import Icon from 'react-native-vector-icons/Ionicons';
 import { MovieFull } from '../interfaces/movieInterface';
 import { Cast } from '../interfaces/creditsInterface';
 import { CastItem } from './CastItem';
+import { StreamingButtonLink } from '../components/streamingButtonLink';
 
 interface Props {
     movieFull: MovieFull;
     cast: Cast[]
 }
 
+const supportedURL = "https://www.google.com/";
 
 export const MovieDetailsComponent = ({ movieFull, cast }: Props) => {
     return (
@@ -34,6 +36,11 @@ export const MovieDetailsComponent = ({ movieFull, cast }: Props) => {
                     </Text>
 
                 </View>
+
+                <StreamingButtonLink
+                    buttonName='soy un boton'
+                    url={supportedURL}
+                />
 
 
                 <Text style={{ fontSize: 23, marginTop: 10, fontWeight: 'bold' }}>

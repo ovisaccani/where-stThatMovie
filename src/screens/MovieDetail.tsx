@@ -3,46 +3,21 @@ import React from "react";
 import { Image, Text, View, StyleSheet, Dimensions, ActivityIndicator,Alert, Button, Linking, } from 'react-native';
 import { ScrollView, TouchableOpacity } from 'react-native-gesture-handler';
 import { RootStackParams } from '../navigation/StackNavigator';
-
 import { useMovieDetails } from '../hooks/useMovieDetails';
 import { MovieDetailsComponent } from '../components/MovieDetailsComponent';
 import Icon from 'react-native-vector-icons/Ionicons';
 
-
-
-
 const screenHeight = Dimensions.get('screen').height;
-
-
-
 interface Props extends StackScreenProps<RootStackParams, 'MovieDetail'>{};
-
-const supportedURL = "https://www.google.com/";
-
-
 
 export const MovieDetail = ( { route, navigation }: Props ) => {
     
     const movie = route.params;
     console.log(movie)
     const uri = `https://image.tmdb.org/t/p/w500${ movie.poster_path }`;
+    const { isLoading, cast, movieFull } = useMovieDetails( movie.id ); 
 
-    const { isLoading, cast, movieFull } = useMovieDetails( movie.id );
-
-    const openUrl = async (url: string) => {
-        const isSupported = await Linking.canOpenURL(url);
-        if (isSupported) {
-            await Linking.openURL(url);
-        } else {
-            Alert.alert(`Don't know how to open this url: ${url}`);
-        }
-    }
-      
-
-
-    return (
-
-        
+    return (        
 
         <ScrollView>
             <View style={ styles.imageContainer }>
@@ -59,13 +34,6 @@ export const MovieDetail = ( { route, navigation }: Props ) => {
                 <Text style={ styles.title }>{ movie.title }</Text>
             </View>
 
-            <View style={styles.marginContainer}>
-                <Button title="call" onPress={() => {
-                    openUrl(supportedURL)
-                }} color="red" />
-            </View>
-
-            
             {
                 isLoading 
                     ? <ActivityIndicator size={ 35 } color="grey" style={{ marginTop: 20 }} />
@@ -82,8 +50,7 @@ export const MovieDetail = ( { route, navigation }: Props ) => {
                         size={ 60 }
                     />
                 </TouchableOpacity>
-            </View>
-                
+            </View>                
             
         </ScrollView>
     )
