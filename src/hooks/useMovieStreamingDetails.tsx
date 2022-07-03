@@ -20,9 +20,20 @@ export const useMovieStreamingDetails = ( movieId: number ) => {
         const streamingInfoPromise = peliculaRapidBd.get<MovieRapidDBMoviesResponse>(``,{ params: { tmdb_id: `movie/${ movieId }` } });
         const [ streamingInfoResp ] = await Promise.all([streamingInfoPromise ]); 
 
+        let noData = false
+        const streamingInfoRespData = streamingInfoResp.data.streamingInfo
+
+        if (!streamingInfoRespData.disney &&
+            !streamingInfoRespData.hbo &&
+            !streamingInfoRespData.hulu &&
+            !streamingInfoRespData.netflix &&
+            !streamingInfoRespData.prime){
+                noData = true
+            }
+
         setState({
             isLoading: false,
-            streamingInfo: streamingInfoResp.data.streamingInfo
+            streamingInfo: noData? undefined: streamingInfoRespData
         })        
     }
 

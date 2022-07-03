@@ -12,7 +12,7 @@ import { StreamingInfo } from '../interfaces/movieRapidInterface';
 interface Props {
     movieFull: MovieFull;
     cast: Cast[],
-    streamingInfo: StreamingInfo
+    streamingInfo?: StreamingInfo
 }
 
 export const MovieDetailsComponent = ({ movieFull, cast, streamingInfo }: Props) => {
@@ -36,53 +36,60 @@ export const MovieDetailsComponent = ({ movieFull, cast, streamingInfo }: Props)
 
                 </View>
 
+                <Text style={{ fontSize: 23, marginTop: 10, fontWeight: 'bold' }}>Servicios de stream</Text> 
+                {
+                    streamingInfo?
+                        <View>
+                            {
+                                streamingInfo?.disney?
+                                    <StreamingButtonLink
+                                        buttonName='Disney'
+                                        url={streamingInfo?.disney?.ar.link}
+                                    />
+                                :
+                                    <View/>
+                                }
+                            {
+                                streamingInfo?.hbo?
+                                    <StreamingButtonLink
+                                        buttonName='HBO'
+                                        url={streamingInfo?.hbo?.ar.link}
+                                    />
+                                :
+                                    <View/>
+                            }
+                            {
+                                streamingInfo?.hulu?
+                                    <StreamingButtonLink
+                                        buttonName='Hulu'
+                                        url={streamingInfo?.hulu?.ar.link}
+                                    />
+                                :
+                                    <View/>
+                            }
+                            {
+                                streamingInfo?.netflix?
+                                    <StreamingButtonLink
+                                        buttonName='Netflix'
+                                        url={streamingInfo?.netflix?.ar.link}
+                                    />
+                                :
+                                    <View/>
+                            }
+                            {
+                                streamingInfo?.prime?
+                                    <StreamingButtonLink
+                                        buttonName='Prime'
+                                        url={streamingInfo?.prime?.ar.link}
+                                    />
+                                :
+                                    <View/>
+                            }
+                        </View>
+                    :
+                        <Text style={{ fontSize: 16, marginTop: 10}}>No se encontraron servisos de stream.</Text>                
+                }
               
-
-                {
-                    streamingInfo?.disney?
-                        <StreamingButtonLink
-                            buttonName='Disney'
-                            url={streamingInfo?.disney?.ar.link}
-                        />
-                    :
-                    <View/>
-                }
-                {
-                    streamingInfo?.hbo?
-                        <StreamingButtonLink
-                            buttonName='HBO'
-                            url={streamingInfo?.hbo?.ar.link}
-                        />
-                    :
-                    <View/>
-                }
-                {
-                    streamingInfo?.hulu?
-                        <StreamingButtonLink
-                            buttonName='Hulu'
-                            url={streamingInfo?.hulu?.ar.link}
-                        />
-                    :
-                    <View/>
-                }
-                {
-                    streamingInfo?.netflix?
-                        <StreamingButtonLink
-                            buttonName='Netflix'
-                            url={streamingInfo?.netflix?.ar.link}
-                        />
-                    :
-                    <View/>
-                }
-                {
-                    streamingInfo?.prime?
-                        <StreamingButtonLink
-                            buttonName='Prime'
-                            url={streamingInfo?.prime?.ar.link}
-                        />
-                    :
-                    <View/>
-                }
 
                 <Text style={{ fontSize: 23, marginTop: 10, fontWeight: 'bold' }}>
                     Historia
