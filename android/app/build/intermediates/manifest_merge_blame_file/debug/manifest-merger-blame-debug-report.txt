@@ -9,108 +9,108 @@
 9        android:targetSdkVersion="31" />
 10
 11    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
-11-->D:\Documentos\GitHub\where-stThatMovie\android\app\src\debug\AndroidManifest.xml:5:5-77
-11-->D:\Documentos\GitHub\where-stThatMovie\android\app\src\debug\AndroidManifest.xml:5:22-75
+11-->/Users/ovisaccani/Documents/VisualProjects/Repositorios/where-stThatMovie/android/app/src/debug/AndroidManifest.xml:5:5-77
+11-->/Users/ovisaccani/Documents/VisualProjects/Repositorios/where-stThatMovie/android/app/src/debug/AndroidManifest.xml:5:22-75
 12    <uses-permission android:name="android.permission.INTERNET" />
-12-->D:\Documentos\GitHub\where-stThatMovie\android\app\src\main\AndroidManifest.xml:4:5-67
-12-->D:\Documentos\GitHub\where-stThatMovie\android\app\src\main\AndroidManifest.xml:4:22-64
+12-->/Users/ovisaccani/Documents/VisualProjects/Repositorios/where-stThatMovie/android/app/src/main/AndroidManifest.xml:4:5-67
+12-->/Users/ovisaccani/Documents/VisualProjects/Repositorios/where-stThatMovie/android/app/src/main/AndroidManifest.xml:4:22-64
 13
 14    <queries>
-14-->D:\Documentos\GitHub\where-stThatMovie\android\app\src\main\AndroidManifest.xml:6:5-23:15
+14-->/Users/ovisaccani/Documents/VisualProjects/Repositorios/where-stThatMovie/android/app/src/main/AndroidManifest.xml:6:5-23:15
 15        <intent>
-15-->D:\Documentos\GitHub\where-stThatMovie\android\app\src\main\AndroidManifest.xml:7:7-10:16
+15-->/Users/ovisaccani/Documents/VisualProjects/Repositorios/where-stThatMovie/android/app/src/main/AndroidManifest.xml:7:7-10:16
 16            <action android:name="android.intent.action.VIEW" />
-16-->D:\Documentos\GitHub\where-stThatMovie\android\app\src\main\AndroidManifest.xml:8:9-61
-16-->D:\Documentos\GitHub\where-stThatMovie\android\app\src\main\AndroidManifest.xml:8:17-58
+16-->/Users/ovisaccani/Documents/VisualProjects/Repositorios/where-stThatMovie/android/app/src/main/AndroidManifest.xml:8:9-61
+16-->/Users/ovisaccani/Documents/VisualProjects/Repositorios/where-stThatMovie/android/app/src/main/AndroidManifest.xml:8:17-58
 17
 18            <data android:scheme="http" />
-18-->D:\Documentos\GitHub\where-stThatMovie\android\app\src\main\AndroidManifest.xml:9:9-38
-18-->D:\Documentos\GitHub\where-stThatMovie\android\app\src\main\AndroidManifest.xml:9:15-36
+18-->/Users/ovisaccani/Documents/VisualProjects/Repositorios/where-stThatMovie/android/app/src/main/AndroidManifest.xml:9:9-38
+18-->/Users/ovisaccani/Documents/VisualProjects/Repositorios/where-stThatMovie/android/app/src/main/AndroidManifest.xml:9:15-36
 19        </intent>
 20        <intent>
-20-->D:\Documentos\GitHub\where-stThatMovie\android\app\src\main\AndroidManifest.xml:11:7-14:16
+20-->/Users/ovisaccani/Documents/VisualProjects/Repositorios/where-stThatMovie/android/app/src/main/AndroidManifest.xml:11:7-14:16
 21            <action android:name="android.intent.action.VIEW" />
-21-->D:\Documentos\GitHub\where-stThatMovie\android\app\src\main\AndroidManifest.xml:8:9-61
-21-->D:\Documentos\GitHub\where-stThatMovie\android\app\src\main\AndroidManifest.xml:8:17-58
+21-->/Users/ovisaccani/Documents/VisualProjects/Repositorios/where-stThatMovie/android/app/src/main/AndroidManifest.xml:8:9-61
+21-->/Users/ovisaccani/Documents/VisualProjects/Repositorios/where-stThatMovie/android/app/src/main/AndroidManifest.xml:8:17-58
 22
 23            <data android:scheme="https" />
-23-->D:\Documentos\GitHub\where-stThatMovie\android\app\src\main\AndroidManifest.xml:9:9-38
-23-->D:\Documentos\GitHub\where-stThatMovie\android\app\src\main\AndroidManifest.xml:9:15-36
+23-->/Users/ovisaccani/Documents/VisualProjects/Repositorios/where-stThatMovie/android/app/src/main/AndroidManifest.xml:9:9-38
+23-->/Users/ovisaccani/Documents/VisualProjects/Repositorios/where-stThatMovie/android/app/src/main/AndroidManifest.xml:9:15-36
 24        </intent>
 25        <intent>
-25-->D:\Documentos\GitHub\where-stThatMovie\android\app\src\main\AndroidManifest.xml:15:7-18:16
+25-->/Users/ovisaccani/Documents/VisualProjects/Repositorios/where-stThatMovie/android/app/src/main/AndroidManifest.xml:15:7-18:16
 26            <action android:name="android.intent.action.VIEW" />
-26-->D:\Documentos\GitHub\where-stThatMovie\android\app\src\main\AndroidManifest.xml:8:9-61
-26-->D:\Documentos\GitHub\where-stThatMovie\android\app\src\main\AndroidManifest.xml:8:17-58
+26-->/Users/ovisaccani/Documents/VisualProjects/Repositorios/where-stThatMovie/android/app/src/main/AndroidManifest.xml:8:9-61
+26-->/Users/ovisaccani/Documents/VisualProjects/Repositorios/where-stThatMovie/android/app/src/main/AndroidManifest.xml:8:17-58
 27
 28            <data android:scheme="geo" />
-28-->D:\Documentos\GitHub\where-stThatMovie\android\app\src\main\AndroidManifest.xml:9:9-38
-28-->D:\Documentos\GitHub\where-stThatMovie\android\app\src\main\AndroidManifest.xml:9:15-36
+28-->/Users/ovisaccani/Documents/VisualProjects/Repositorios/where-stThatMovie/android/app/src/main/AndroidManifest.xml:9:9-38
+28-->/Users/ovisaccani/Documents/VisualProjects/Repositorios/where-stThatMovie/android/app/src/main/AndroidManifest.xml:9:15-36
 29        </intent>
 30        <intent>
-30-->D:\Documentos\GitHub\where-stThatMovie\android\app\src\main\AndroidManifest.xml:19:7-22:16
+30-->/Users/ovisaccani/Documents/VisualProjects/Repositorios/where-stThatMovie/android/app/src/main/AndroidManifest.xml:19:7-22:16
 31            <action android:name="android.intent.action.VIEW" />
-31-->D:\Documentos\GitHub\where-stThatMovie\android\app\src\main\AndroidManifest.xml:8:9-61
-31-->D:\Documentos\GitHub\where-stThatMovie\android\app\src\main\AndroidManifest.xml:8:17-58
+31-->/Users/ovisaccani/Documents/VisualProjects/Repositorios/where-stThatMovie/android/app/src/main/AndroidManifest.xml:8:9-61
+31-->/Users/ovisaccani/Documents/VisualProjects/Repositorios/where-stThatMovie/android/app/src/main/AndroidManifest.xml:8:17-58
 32
 33            <data android:scheme="google.navigation" />
-33-->D:\Documentos\GitHub\where-stThatMovie\android\app\src\main\AndroidManifest.xml:9:9-38
-33-->D:\Documentos\GitHub\where-stThatMovie\android\app\src\main\AndroidManifest.xml:9:15-36
+33-->/Users/ovisaccani/Documents/VisualProjects/Repositorios/where-stThatMovie/android/app/src/main/AndroidManifest.xml:9:9-38
+33-->/Users/ovisaccani/Documents/VisualProjects/Repositorios/where-stThatMovie/android/app/src/main/AndroidManifest.xml:9:15-36
 34        </intent>
 35    </queries>
 36
 37    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
-37-->[com.facebook.flipper:flipper:0.125.0] C:\Users\Echigah\.gradle\caches\transforms-3\b2ec3232205e095c09543a31d56ae642\transformed\jetified-flipper-0.125.0\AndroidManifest.xml:16:5-76
-37-->[com.facebook.flipper:flipper:0.125.0] C:\Users\Echigah\.gradle\caches\transforms-3\b2ec3232205e095c09543a31d56ae642\transformed\jetified-flipper-0.125.0\AndroidManifest.xml:16:22-73
+37-->[com.facebook.flipper:flipper:0.125.0] /Users/ovisaccani/.gradle/caches/transforms-3/b2ec3232205e095c09543a31d56ae642/transformed/jetified-flipper-0.125.0/AndroidManifest.xml:16:5-76
+37-->[com.facebook.flipper:flipper:0.125.0] /Users/ovisaccani/.gradle/caches/transforms-3/b2ec3232205e095c09543a31d56ae642/transformed/jetified-flipper-0.125.0/AndroidManifest.xml:16:22-73
 38
 39    <application
-39-->D:\Documentos\GitHub\where-stThatMovie\android\app\src\main\AndroidManifest.xml:25:5-44:19
+39-->/Users/ovisaccani/Documents/VisualProjects/Repositorios/where-stThatMovie/android/app/src/main/AndroidManifest.xml:25:5-44:19
 40        android:name="com.whereisthatmovie.MainApplication"
-40-->D:\Documentos\GitHub\where-stThatMovie\android\app\src\main\AndroidManifest.xml:26:7-38
+40-->/Users/ovisaccani/Documents/VisualProjects/Repositorios/where-stThatMovie/android/app/src/main/AndroidManifest.xml:26:7-38
 41        android:allowBackup="false"
-41-->D:\Documentos\GitHub\where-stThatMovie\android\app\src\main\AndroidManifest.xml:30:7-34
+41-->/Users/ovisaccani/Documents/VisualProjects/Repositorios/where-stThatMovie/android/app/src/main/AndroidManifest.xml:30:7-34
 42        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-42-->[androidx.core:core:1.6.0] C:\Users\Echigah\.gradle\caches\transforms-3\5c61d7afbc1bcd99cb491da6ba2ee6c1\transformed\core-1.6.0\AndroidManifest.xml:24:18-86
+42-->[androidx.core:core:1.6.0] /Users/ovisaccani/.gradle/caches/transforms-3/5c61d7afbc1bcd99cb491da6ba2ee6c1/transformed/core-1.6.0/AndroidManifest.xml:24:18-86
 43        android:debuggable="true"
 44        android:icon="@mipmap/ic_launcher"
-44-->D:\Documentos\GitHub\where-stThatMovie\android\app\src\main\AndroidManifest.xml:28:7-41
+44-->/Users/ovisaccani/Documents/VisualProjects/Repositorios/where-stThatMovie/android/app/src/main/AndroidManifest.xml:28:7-41
 45        android:label="@string/app_name"
-45-->D:\Documentos\GitHub\where-stThatMovie\android\app\src\main\AndroidManifest.xml:27:7-39
+45-->/Users/ovisaccani/Documents/VisualProjects/Repositorios/where-stThatMovie/android/app/src/main/AndroidManifest.xml:27:7-39
 46        android:roundIcon="@mipmap/ic_launcher_round"
-46-->D:\Documentos\GitHub\where-stThatMovie\android\app\src\main\AndroidManifest.xml:29:7-52
+46-->/Users/ovisaccani/Documents/VisualProjects/Repositorios/where-stThatMovie/android/app/src/main/AndroidManifest.xml:29:7-52
 47        android:theme="@style/AppTheme"
-47-->D:\Documentos\GitHub\where-stThatMovie\android\app\src\main\AndroidManifest.xml:31:7-38
+47-->/Users/ovisaccani/Documents/VisualProjects/Repositorios/where-stThatMovie/android/app/src/main/AndroidManifest.xml:31:7-38
 48        android:usesCleartextTraffic="true" >
-48-->D:\Documentos\GitHub\where-stThatMovie\android\app\src\debug\AndroidManifest.xml:8:9-44
+48-->/Users/ovisaccani/Documents/VisualProjects/Repositorios/where-stThatMovie/android/app/src/debug/AndroidManifest.xml:8:9-44
 49        <activity
-49-->D:\Documentos\GitHub\where-stThatMovie\android\app\src\debug\AndroidManifest.xml:11:9-111
+49-->/Users/ovisaccani/Documents/VisualProjects/Repositorios/where-stThatMovie/android/app/src/debug/AndroidManifest.xml:11:9-111
 50            android:name="com.facebook.react.devsupport.DevSettingsActivity"
-50-->D:\Documentos\GitHub\where-stThatMovie\android\app\src\debug\AndroidManifest.xml:11:19-83
+50-->/Users/ovisaccani/Documents/VisualProjects/Repositorios/where-stThatMovie/android/app/src/debug/AndroidManifest.xml:11:19-83
 51            android:exported="false" />
-51-->D:\Documentos\GitHub\where-stThatMovie\android\app\src\debug\AndroidManifest.xml:11:84-108
+51-->/Users/ovisaccani/Documents/VisualProjects/Repositorios/where-stThatMovie/android/app/src/debug/AndroidManifest.xml:11:84-108
 52        <activity
-52-->D:\Documentos\GitHub\where-stThatMovie\android\app\src\main\AndroidManifest.xml:32:7-43:18
+52-->/Users/ovisaccani/Documents/VisualProjects/Repositorios/where-stThatMovie/android/app/src/main/AndroidManifest.xml:32:7-43:18
 53            android:name="com.whereisthatmovie.MainActivity"
-53-->D:\Documentos\GitHub\where-stThatMovie\android\app\src\main\AndroidManifest.xml:33:9-37
+53-->/Users/ovisaccani/Documents/VisualProjects/Repositorios/where-stThatMovie/android/app/src/main/AndroidManifest.xml:33:9-37
 54            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize|uiMode"
-54-->D:\Documentos\GitHub\where-stThatMovie\android\app\src\main\AndroidManifest.xml:35:9-118
+54-->/Users/ovisaccani/Documents/VisualProjects/Repositorios/where-stThatMovie/android/app/src/main/AndroidManifest.xml:35:9-118
 55            android:exported="true"
-55-->D:\Documentos\GitHub\where-stThatMovie\android\app\src\main\AndroidManifest.xml:38:9-32
+55-->/Users/ovisaccani/Documents/VisualProjects/Repositorios/where-stThatMovie/android/app/src/main/AndroidManifest.xml:38:9-32
 56            android:label="@string/app_name"
-56-->D:\Documentos\GitHub\where-stThatMovie\android\app\src\main\AndroidManifest.xml:34:9-41
+56-->/Users/ovisaccani/Documents/VisualProjects/Repositorios/where-stThatMovie/android/app/src/main/AndroidManifest.xml:34:9-41
 57            android:launchMode="singleTask"
-57-->D:\Documentos\GitHub\where-stThatMovie\android\app\src\main\AndroidManifest.xml:36:9-40
+57-->/Users/ovisaccani/Documents/VisualProjects/Repositorios/where-stThatMovie/android/app/src/main/AndroidManifest.xml:36:9-40
 58            android:windowSoftInputMode="adjustResize" >
-58-->D:\Documentos\GitHub\where-stThatMovie\android\app\src\main\AndroidManifest.xml:37:9-51
+58-->/Users/ovisaccani/Documents/VisualProjects/Repositorios/where-stThatMovie/android/app/src/main/AndroidManifest.xml:37:9-51
 59            <intent-filter>
-59-->D:\Documentos\GitHub\where-stThatMovie\android\app\src\main\AndroidManifest.xml:39:9-42:25
+59-->/Users/ovisaccani/Documents/VisualProjects/Repositorios/where-stThatMovie/android/app/src/main/AndroidManifest.xml:39:9-42:25
 60                <action android:name="android.intent.action.MAIN" />
-60-->D:\Documentos\GitHub\where-stThatMovie\android\app\src\main\AndroidManifest.xml:40:13-65
-60-->D:\Documentos\GitHub\where-stThatMovie\android\app\src\main\AndroidManifest.xml:40:21-62
+60-->/Users/ovisaccani/Documents/VisualProjects/Repositorios/where-stThatMovie/android/app/src/main/AndroidManifest.xml:40:13-65
+60-->/Users/ovisaccani/Documents/VisualProjects/Repositorios/where-stThatMovie/android/app/src/main/AndroidManifest.xml:40:21-62
 61
 62                <category android:name="android.intent.category.LAUNCHER" />
-62-->D:\Documentos\GitHub\where-stThatMovie\android\app\src\main\AndroidManifest.xml:41:13-73
-62-->D:\Documentos\GitHub\where-stThatMovie\android\app\src\main\AndroidManifest.xml:41:23-70
+62-->/Users/ovisaccani/Documents/VisualProjects/Repositorios/where-stThatMovie/android/app/src/main/AndroidManifest.xml:41:13-73
+62-->/Users/ovisaccani/Documents/VisualProjects/Repositorios/where-stThatMovie/android/app/src/main/AndroidManifest.xml:41:23-70
 63            </intent-filter>
 64        </activity>
 65    </application>

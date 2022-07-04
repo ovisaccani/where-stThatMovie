@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext, useEffect, useState } from "react";
 import {
 	ActivityIndicator,
 	Dimensions,
@@ -13,6 +13,9 @@ import { useMovies } from "../hooks/useMovies";
 import { HorizontalSlider } from "../components/HorizontalSlider";
 import { StackScreenProps } from "@react-navigation/stack";
 import { SearchInput } from "../components/SearchInput";
+import { AuthContext } from "../context/authContext/AuthContext";
+import AsyncStorage from "@react-native-async-storage/async-storage";
+import { Appbar } from "../components/Appbar";
 
 const { width: windowWidth } = Dimensions.get("window");
 
@@ -57,6 +60,7 @@ export const Home = ({ navigation }: Props) => {
 
 	return (
 		<View>
+			<Appbar navigation={navigation} />
 			<ScrollView>
 				{searchIsLoading ? (
 					<View
@@ -118,7 +122,6 @@ export const Home = ({ navigation }: Props) => {
 						movies={topRated}
 						navigation={navigation}
 					/>
-
 				</View>
 			</ScrollView>
 		</View>

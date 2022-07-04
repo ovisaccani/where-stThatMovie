@@ -1,8 +1,17 @@
-import React, { useState } from "react";
-import { Image, StyleSheet, Text, TouchableOpacity, View } from "react-native";
+import React, { useContext, useEffect, useState } from "react";
+import {
+	Button,
+	Image,
+	StyleSheet,
+	Text,
+	TouchableOpacity,
+	View,
+} from "react-native";
 import { StackScreenProps } from "@react-navigation/stack";
 import { InputLogin } from "../components/InputLogin";
+import { AuthContext } from "../context/authContext/AuthContext";
 import { auth } from "../../firebase";
+import AsyncStorage from "@react-native-async-storage/async-storage";
 
 interface Props extends StackScreenProps<any, any> {}
 
@@ -10,24 +19,27 @@ export const Login = ({ navigation }: Props) => {
 	const [usuario, setusuario] = useState("");
 	const [contrasena, setContrasena] = useState("");
 	const [error, setError] = useState("");
+	const { signIn } = useContext(AuthContext);
 
-	const validate = () => {
+	const validate = async () => {
 		if (usuario === "" || contrasena === "") {
 			setError("Error. Debe completar ámbos campos");
 		} else {
-			
-			auth
-				.signInWithEmailAndPassword(usuario, contrasena)
-				.then((userCredentials: any) =>{
-					const user = userCredentials
-					if (user){						
+			signIn;
+			auth.signInWithEmailAndPassword(usuario, contrasena)
+				.then(async (userCredentials: any) => {
+					const user = userCredentials;
+					await AsyncStorage.setItem("token", user.user?.uid);
+					if (user) {
+						signIn();
 						navigation.navigate("Home");
-					}else{
-						setError("Error. usario o contraseña invalidos.");
+					} else {
+						setError("Error. Usuario o contraseña invalidos.");
 					}
 				})
-				.catch((error: any) => setError(error.message))
-		
+				.catch(() =>
+					setError("Error. Usuario o contraseña invalidos.")
+				);
 		}
 	};
 

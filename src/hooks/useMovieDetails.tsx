@@ -16,8 +16,6 @@ export const useMovieDetails = ( movieId: number ) => {
         cast: []
     });
 
-    console.log("ID ID ID ID")
-    console.log(movieId)
 
     const getMovieDetails = async() => {
 

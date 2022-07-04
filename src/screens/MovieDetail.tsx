@@ -14,7 +14,6 @@ interface Props extends StackScreenProps<RootStackParams, 'MovieDetail'>{};
 export const MovieDetail = ( { route, navigation }: Props ) => {
     
     const movie = route.params;
-    console.log(movie)
     const uri = `https://image.tmdb.org/t/p/w500${ movie.poster_path }`;
     const { isLoading, cast, movieFull} = useMovieDetails( movie.id ); 
     const {streamingInfo } = useMovieStreamingDetails( movie.id ); 

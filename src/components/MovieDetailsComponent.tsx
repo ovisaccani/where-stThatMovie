@@ -87,7 +87,7 @@ export const MovieDetailsComponent = ({ movieFull, cast, streamingInfo }: Props)
                             }
                         </View>
                     :
-                        <Text style={{ fontSize: 16, marginTop: 10}}>No se encontraron servisos de stream.</Text>                
+                        <Text style={{ fontSize: 16, marginTop: 10}}>No se encontraron servicios de stream.</Text>                
                 }
               
 

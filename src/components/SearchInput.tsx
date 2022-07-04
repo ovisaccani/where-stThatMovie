@@ -44,22 +44,25 @@ const styles = StyleSheet.create({
 	},
 	input: {
 		flex: 1,
+		backgroundColor: "rgb(226, 224, 224)",
 		marginLeft: 4,
 	},
 	sectionStyle: {
 		flexDirection: "row",
 		justifyContent: "center",
 		alignItems: "center",
-		backgroundColor: "#43434403",
+		// backgroundColor: "#43434403",
 		height: 40,
 		borderWidth: 1,
 		borderRadius: 10,
 		marginTop: 4,
 		borderColor: "#00386E7D",
 		paddingHorizontal: 4,
+		backgroundColor: "rgb(226, 224, 224)",
 	},
 	iconStyle: {
 		alignItems: "center",
 		marginRight: 8,
+		backgroundColor: "rgb(226, 224, 224)",
 	},
 });
