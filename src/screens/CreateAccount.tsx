@@ -21,14 +21,14 @@ export const CreateAccount = ({ navigation }: Props) => {
 				.then((userCredentials: any) => {
 					setError("");
 					setSuccessMessage(
-						"Usuario registrado exitosamente! En 3 segundos será redireccionado a la Home"
+						"Usuario registrado exitosamente! En 3 segundos deberá logearse para ingresar"
 					);
 					setTimeout(() => {
-						navigation.navigate("Home");
+						navigation.navigate("Login");
 					}, 3000);
 				})
-				.catch((error: any) => {
-					setError(error.message);
+				.catch(() => {
+					setError("Error, usuario ya en uso.");
 					setSuccessMessage("");
 				});
 		}
@@ -41,6 +41,16 @@ export const CreateAccount = ({ navigation }: Props) => {
 				alignItems: "center",
 			}}
 		>
+			<Text
+				style={{
+					marginTop: 16,
+					fontSize: 22,
+					color: "#00386E",
+					fontWeight: "bold",
+				}}
+			>
+				REGISTRATE
+			</Text>
 			<View style={styles.container}>
 				<InputLogin
 					title="Email"

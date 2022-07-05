@@ -43,6 +43,12 @@ export const Login = ({ navigation }: Props) => {
 		}
 	};
 
+	useEffect(() => {
+		if (usuario.length === 0 && contrasena.length === 0) {
+			setError("");
+		}
+	}, [usuario, contrasena]);
+
 	return (
 		<View
 			style={{
@@ -50,6 +56,16 @@ export const Login = ({ navigation }: Props) => {
 				alignItems: "center",
 			}}
 		>
+			<Text
+				style={{
+					marginTop: 16,
+					fontSize: 22,
+					color: "#00386E",
+					fontWeight: "bold",
+				}}
+			>
+				LOGIN
+			</Text>
 			<View style={styles.container}>
 				<InputLogin
 					title="Email"
