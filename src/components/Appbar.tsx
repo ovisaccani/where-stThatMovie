@@ -11,7 +11,7 @@ export const Appbar = ({ navigation }: Props) => {
 	const { logout } = useContext(AuthContext);
 	const logOut = () => {
 		logout();
-		// navigation.navigate("Login");
+		navigation.navigate("Login");
 	};
 
 	return (

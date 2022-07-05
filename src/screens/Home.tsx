@@ -36,13 +36,13 @@ export const Home = ({ navigation }: Props) => {
 	} = useMovies();
 	const { top } = useSafeAreaInsets();
 
-	React.useEffect(
+/* 	React.useEffect(
 		() =>
 			navigation.addListener("beforeRemove", (e) => {
 				e.preventDefault();
 			}),
 		[navigation]
-	);
+	); */
 
 	if (isLoading) {
 		return (

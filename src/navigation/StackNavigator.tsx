@@ -30,7 +30,6 @@ export const StackNavigator = () => {
 				setIsSignedIn(false);
 				setLoading(false);
 			} else {
-
 				setIsSignedIn(true);
 				setLoading(false);
 			}
@@ -52,14 +51,18 @@ export const StackNavigator = () => {
 	}
 	if (isSignedIn) {
 		return (
-			<Stack.Navigator screenOptions={{ headerShown: false }}>
+			<Stack.Navigator initialRouteName="Home" screenOptions={{ headerShown: false }}>
 				<Stack.Screen name="Home" component={Home} />
 				<Stack.Screen name="MovieDetail" component={MovieDetail} />
+				<Stack.Screen name="Login" component={Login} />
+				<Stack.Screen name="CreateAccount" component={CreateAccount} />
 			</Stack.Navigator>
 		);
 	} else {
 		return (
-			<Stack.Navigator screenOptions={{ headerShown: false }}>
+			<Stack.Navigator initialRouteName="Login" screenOptions={{ headerShown: false }}>
+				<Stack.Screen name="Home" component={Home} />
+				<Stack.Screen name="MovieDetail" component={MovieDetail} />
 				<Stack.Screen name="Login" component={Login} />
 				<Stack.Screen name="CreateAccount" component={CreateAccount} />
 			</Stack.Navigator>
