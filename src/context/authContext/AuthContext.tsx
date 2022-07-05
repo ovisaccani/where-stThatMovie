@@ -32,7 +32,6 @@ export const AuthProvider = ({ children }: any) => {
 
 	const logout = async () => {
 		await AsyncStorage.setItem("token", "");
-		console.log("logout")
 
 		dispatch({ type: "logout" });
 	};

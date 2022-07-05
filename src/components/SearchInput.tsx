@@ -12,9 +12,15 @@ interface Props {
 	value: string;
 	setValue: React.Dispatch<React.SetStateAction<string>>;
 	getMovieByName: () => Promise<void>;
+	yaBusco: boolean;
 }
 
-export const SearchInput = ({ value, setValue, getMovieByName }: Props) => {
+export const SearchInput = ({
+	value,
+	setValue,
+	getMovieByName,
+	yaBusco,
+}: Props) => {
 	return (
 		<View style={styles.containerInput}>
 			<View style={styles.sectionStyle}>
@@ -32,6 +38,15 @@ export const SearchInput = ({ value, setValue, getMovieByName }: Props) => {
 				>
 					<Text>Buscar</Text>
 				</TouchableOpacity>
+				{value.length > 0 && yaBusco ? (
+					<TouchableOpacity
+						onPress={() => setValue("")}
+						disabled={value.length === 0}
+						style={{ marginLeft: 8 }}
+					>
+						<Text>Cancelar</Text>
+					</TouchableOpacity>
+				) : null}
 			</View>
 		</View>
 	);

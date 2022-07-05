@@ -4,7 +4,15 @@ import { StackNavigator } from "./src/navigation/StackNavigator";
 import "react-native-gesture-handler";
 import { NavigationContainer } from "@react-navigation/native";
 import { AuthProvider } from "./src/context/authContext/AuthContext";
+import { PeliculasProvider } from "./src/context/peliculasContext/PeliculasContext";
 
+const AppState = ({ children }: any) => {
+	return (
+		<AuthProvider>
+			<PeliculasProvider>{children}</PeliculasProvider>
+		</AuthProvider>
+	);
+};
 const App = () => {
 	return (
 		<NavigationContainer>
@@ -13,10 +21,6 @@ const App = () => {
 			</AppState>
 		</NavigationContainer>
 	);
-};
-
-const AppState = ({ children }: any) => {
-	return <AuthProvider>{children}</AuthProvider>;
 };
 
 const styles = StyleSheet.create({});

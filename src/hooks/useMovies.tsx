@@ -1,6 +1,7 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import peliculaBd from "../api/peliculaBd";
 import { MovieDBMoviesResponse, Movie } from "../interfaces/movieInterface";
+import { PeliculasContext } from "../context/peliculasContext/PeliculasContext";
 
 interface MoviesState {
 	nowPlaying: Movie[];
@@ -20,6 +21,16 @@ export const useMovies = () => {
 		topRated: [],
 		searched: [],
 	});
+
+	useEffect(() => {
+		if (searchParams.length === 0) {
+			setyaBusco(false);
+			setMoviesState({
+				...moviesState,
+				searched: [],
+			});
+		}
+	}, [searchParams]);
 
 	const getMovies = async () => {
 		setIsLoading(true);

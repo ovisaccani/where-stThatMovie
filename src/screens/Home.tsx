@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext} from "react";
 import {
 	ActivityIndicator,
 	Dimensions,
@@ -13,9 +13,8 @@ import { useMovies } from "../hooks/useMovies";
 import { HorizontalSlider } from "../components/HorizontalSlider";
 import { StackScreenProps } from "@react-navigation/stack";
 import { SearchInput } from "../components/SearchInput";
-import { AuthContext } from "../context/authContext/AuthContext";
-import AsyncStorage from "@react-native-async-storage/async-storage";
 import { Appbar } from "../components/Appbar";
+import { PeliculasContext } from "../context/peliculasContext/PeliculasContext";
 
 const { width: windowWidth } = Dimensions.get("window");
 
@@ -36,13 +35,8 @@ export const Home = ({ navigation }: Props) => {
 	} = useMovies();
 	const { top } = useSafeAreaInsets();
 
-/* 	React.useEffect(
-		() =>
-			navigation.addListener("beforeRemove", (e) => {
-				e.preventDefault();
-			}),
-		[navigation]
-	); */
+	const { peliculasFavoritas } = useContext(PeliculasContext);
+
 
 	if (isLoading) {
 		return (
@@ -79,6 +73,7 @@ export const Home = ({ navigation }: Props) => {
 							value={searchParams}
 							setValue={setSearchParams}
 							getMovieByName={getMovieByName}
+							yaBusco={yaBusco}
 						/>
 						{yaBusco && searched.length === 0 ? (
 							<Text style={{ textAlign: "center" }}>
@@ -107,6 +102,13 @@ export const Home = ({ navigation }: Props) => {
 					</View>
 				)}
 				<View>
+					{peliculasFavoritas.length > 0 ? (
+						<HorizontalSlider
+							title="Lista de favoritos"
+							movies={peliculasFavoritas}
+							navigation={navigation}
+						/>
+					) : null}
 					<HorizontalSlider
 						title="Proyectandose"
 						movies={nowPlaying}
