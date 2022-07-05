@@ -53,7 +53,7 @@ export const Home = ({ navigation }: Props) => {
 	}
 
 	return (
-		<View>
+		<View style={{ paddingBottom: 8 }}>
 			<Appbar navigation={navigation} />
 			<ScrollView>
 				{searchIsLoading ? (
@@ -110,7 +110,7 @@ export const Home = ({ navigation }: Props) => {
 						/>
 					) : null}
 					<HorizontalSlider
-						title="Proyectandose"
+						title="Peliculas Nuevas"
 						movies={nowPlaying}
 						navigation={navigation}
 					/>
